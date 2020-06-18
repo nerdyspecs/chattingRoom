@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="text-center">
+		<h1>Welcome</h1>
+		<h1>Here are the list of all rooms available</h1>
+	</div>
+	<div class="text-center">
+		<% @rooms.each do |room| %>
+			<div class="row">
+				<div class="col-6 text-right">
+					<%=link_to room.name, room_path(room)%> 
+				</div>
+				<div class="col-6 text-left">
+					created by:<%=room.user.name%><br>
+				</div>
+			</div>
+		<%end%>
+
+		<!-- create rooms -->
+		<%= form_for @room, remote:false do |f|%>
+			<!-- check if session is empty. If yes, ask to create a username -->
+
+
+			<!-- session of the user -->
+			<%= f.hidden_field :user_id, :value => session[:user] %>
+			<%=f.text_field :name ,:class=>'form-control'%> 
+
+
+			<%=f.submit :class=>'btn btn-primary'%>
+		<%end%>
+	</div>
+</div>

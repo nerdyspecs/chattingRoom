@@ -1,0 +1,21 @@
+<div class="container">
+	<div class = "text-center">
+		<h1>Welcome to <%=@room.name%>, created by <%=@room.user.name%></h1>
+	</div>
+
+	<div id="messageSection" class="container">
+
+	</div>
+
+
+	<div class="container">
+		<%= form_for @message, remote:true do |f|%>
+			<!-- session of the user -->
+			<%= f.hidden_field :user_id, :value => session[:user] %>
+			<%= f.hidden_field :room_id, :value => @room.id %>
+
+			<%=f.text_field :content ,:class=>'form-control'%> 
+			<%=f.submit :class=>'btn btn-primary'%>
+		<%end%>
+	</div>
+</div>
