@@ -9,19 +9,19 @@ Besides the only takes in numeric calculations and gives you the answer. There a
 For the time being, this web app allows empty username, or empty room names. Once the web app is a little more robust than it is currently, it will be hosted in Heroku.
 
 # --Requirements--
-* Ruby version
+* Ruby version:
 ruby 2.6.3
 
-* Configuration
+* Configuration:
 Run 'bundle install' to install all of the gems that are used in this project.
 
-* Database creation
+* Database creation:
 once cloned, navigate into the folder. This app uses Postgresql as its database. Run 'rails db:create' to create the database.
 
-* Database initialization
+* Database initialization:
 Once the database is created, run 'rails db:migrate' to migrate all of the migration files. 
 Then, to seed the database, simply run 'rails db:seed'. This will give you 2 instances of Users(host,guest), 1 instance of Room(hosted by the host user), and 2 instances of Messages(message from host, message from guest).
 
-* Deployment instructions
+* Deployment instructions:
 Simply run 'rails s' to start the server.
 
