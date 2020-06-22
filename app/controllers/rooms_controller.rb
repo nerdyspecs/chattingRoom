@@ -33,9 +33,6 @@ class RoomsController < ApplicationController
 
 	def destroy   
 		@room = Room.find(params[:id])
-		byebug
-
-		@messages = @room.message
 	    if @room.destroy   
 	      flash[:notice] = 'Post deleted!'   
 	      redirect_to root_path   
