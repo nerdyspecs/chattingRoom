@@ -11,7 +11,7 @@ host.save
 guest = User.new(:name=>"guest")
 guest.save
 
-room1 = Room.new(:user_id=>host.id,:name=>"room1")
+room1 = Room.new(:user_id=>host.id,:name=>"Room1")
 room1.save
 
 messageHost = Message.new(:content=>"hello world from host", :user_id=>host.id, :room_id=>room1.id) 
