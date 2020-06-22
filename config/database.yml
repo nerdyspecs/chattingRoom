@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: actionCable_production
-  username: actionCable
-  password: <%= ENV['ACTIONCABLE_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
+  # username: actionCable
+  # password: <%= ENV['ACTIONCABLE_DATABASE_PASSWORD'] %>
